@@ -27,10 +27,3 @@ The scan discovered several live hosts on the network, including the VMware gate
 - **FTP (21) & Telnet (23):** Transmit credentials in clear text. An attacker could use Wireshark to sniff passwords.
 - **SMB (445):** Exposed SMB shares are the primary attack vector for worms like WannaCry.
 
-## Files Included
-- `network_scan.nmap`: Detailed text output of the scan.
-- `network_scan.xml`: XML output for parsing.
-- `scan_results.png`: Screenshot of the terminal output.
-
-## Wireshark Analysis (Optional)
-I ran Wireshark during the scan and filtered for `tcp.flags.syn == 1`. This visually confirmed the flood of SYN packets sent by Nmap to all IPs on the subnet, demonstrating how a TCP SYN scan works at the packet level.
